@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Table, Badge } from "@mantine/core";
-import { portalsFromSupabase } from "utils/api/supabaseApi";
-import { findSearchModule } from "utils/api/searchApi";
+import { portalsFromSupabase } from "../../utils/api/supabaseApi";
+import { findSearchModule } from "../../utils/api/searchApi";
 
 const Home = () => {
 	const [data, setData] = useState(null);
