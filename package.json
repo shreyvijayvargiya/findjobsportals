@@ -18,6 +18,7 @@
 		"@mantine/core": "^5.9.3",
 		"@mantine/hooks": "^5.9.3",
 		"@mantine/next": "^5.9.3",
+		"@next/bundle-analyzer": "^13.0.6",
 		"@supabase/supabase-js": "^1.28.0",
 		"@tailwindcss/postcss7-compat": "^2.1.0",
 		"autoprefixer": "^9.8.6",

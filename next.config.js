@@ -1,3 +1,7 @@
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+	enabled: process.env.ANALYZE === "true",
+});
+
 module.exports = () => {
 	return {
 		env: {
@@ -12,5 +16,16 @@ module.exports = () => {
 			REACT_APP_ID: "1:596889031788:web:c58438cfc1340954b53449",
 			REACT_APP_MEASUREMENT_ID: "596889031788",
 		},
+		webpack: (config) => {
+			config.node = {
+				fs: "empty",
+				child_process: "empty",
+				net: "empty",
+				dns: "empty",
+				tls: "empty",
+			};
+			return config;
+		},
+		...withBundleAnalyzer({}),
 	};
 };
