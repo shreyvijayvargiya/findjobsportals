@@ -22,7 +22,6 @@
 		"@supabase/supabase-js": "^1.28.0",
 		"@tailwindcss/postcss7-compat": "^2.1.0",
 		"autoprefixer": "^9.8.6",
-		"firebase": "^8.2.2",
 		"fuse.js": "^6.6.2",
 		"next": "^11.0.0",
 		"postcss": "^7",
