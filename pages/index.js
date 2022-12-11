@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home } from "../components";
+import { Home } from "../Components";
 import Head from 'next/head';
 
 const HomePage = () => {
