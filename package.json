@@ -28,6 +28,7 @@
 		"postcss-cli": "^8.3.1",
 		"react": "^16.2.0",
 		"react-dom": "^16.2.0",
+		"react-icons": "^4.7.1",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat",
 		"yarn": "^1.22.17"
 	}
