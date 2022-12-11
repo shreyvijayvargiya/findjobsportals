@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { portalsFromSupabase } from "../../utils/api/supabaseApi";
 import { Table, Badge } from "@mantine/core";
-import { findSearchModule } from "../../utils/api/searchApi";
+import { portalsFromSupabase } from "utils/api/supabaseApi";
+import { findSearchModule } from "utils/api/searchApi";
 
 const Home = () => {
 	const [data, setData] = useState(null);
@@ -26,29 +26,6 @@ const Home = () => {
 		</tr>
 	);
 
-	const Rows = () => data &&
-			data.map((item) => {
-				return (
-					<tr key={item.id} className="hover:bg-gray-100 ">
-						<td className="font-semibold">{item.name}</td>
-						<td>
-							{item.domain.map((element) => (
-								<Badge>{element}</Badge>
-							))}
-						</td>
-						<td>
-							<a
-								href={item.website}
-								target="_blank"
-								className="text-indigo-700 hover:text-indigo-600 hover:underline"
-							>
-								{item.website}
-							</a>
-						</td>
-					</tr>
-				);
-			})
-
 	return (
 		<div>
 			<div className="md:w-3/5 xl:w-3/5 2xl:w-2/5 mx-auto xxs:w-full xs:w-full sm:w-full m-10">
@@ -61,7 +38,27 @@ const Home = () => {
 					<Table>
 						<thead>{ths}</thead>
 						<tbody>
-							<Rows />
+							{data &&
+								data.map((item) => (
+										<tr key={item.name} className="hover:bg-gray-100 ">
+											<td className="font-semibold">{item.name}</td>
+											<td>
+												{item.domain.map((element) => (
+													<Badge>{element}</Badge>
+												))}
+											</td>
+											<td>
+												<a
+													href={item.website}
+													target="_blank"
+													className="text-indigo-700 hover:text-indigo-600 hover:underline"
+												>
+													{item.website}
+												</a>
+											</td>
+										</tr>
+									)
+								)}
 						</tbody>
 					</Table>
 				</div>
