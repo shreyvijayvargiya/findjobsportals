@@ -27,16 +27,29 @@ const Home = () => {
 	}, []);
 
 	const ths = (
-		<tr className="bg-gray-50">
+		<tr className="bg-gray-50 text-left">
 			<th>Name</th>
 			<th>Category</th>
 			<th>Website</th>
 		</tr>
 	);
 
+	const getBadgeColor = (type) => {
+		let color;
+		if(type === "All"){
+			color = "teal"
+		}else if(type === "Development"){
+			color = "orange"
+		}else if(type === "Designing"){
+			color = "voilet"
+		}else if(type === "Blockchain"){
+			color= "pink"
+		}
+		return color;
+	}
+
 	return (
 		<div>
-		
 			<div className="md:w-3/5 xl:w-3/5 2xl:w-2/5 mx-auto xxs:w-full xs:w-full sm:w-full my-20">
 				<p className="text-4xl font-bold">Jobs Portals around the world</p>
 				<p>
@@ -50,17 +63,17 @@ const Home = () => {
 							{data &&
 								data.map((item) => (
 									<tr key={item.name} className="hover:bg-gray-100 ">
-										<td className="font-semibold">{item.name}</td>
+										<td className="text-2xl font-regular">{item.name}</td>
 										<td>
 											{item.domain.map((element) => (
-												<Badge>{element}</Badge>
+												<Badge color={getBadgeColor(element)}>{element}</Badge>
 											))}
 										</td>
 										<td>
 											<a
 												href={item.website}
 												target="_blank"
-												className="text-indigo-700 hover:text-indigo-600 hover:underline"
+												className="text-pink-800 hover:text-pink-700 hover:underline"
 											>
 												{item.website}
 											</a>
