@@ -1,6 +1,7 @@
 import React from "react";
 import { MantineProvider } from "@mantine/core";
 import "tailwindcss/tailwind.css";
+import { Body } from "../Components";
 
 const MyApp = ({ Component, pageProps }) => {
 
@@ -19,15 +20,17 @@ const MyApp = ({ Component, pageProps }) => {
 			    });
 			`}
 		    </script>
-		<MantineProvider	
-			withGlobalStyles
-			withNormalizeCSS
-			theme={{
-				colorScheme: "light",
-			}}
-		>
-			<Component {...pageProps} />
-		</MantineProvider>
+				<MantineProvider	
+					withGlobalStyles
+					withNormalizeCSS
+					theme={{
+						colorScheme: "light",
+					}}
+				>
+					<Body>
+						<Component {...pageProps} />
+					</Body>
+				</MantineProvider>
 		</div>
 	);
 };

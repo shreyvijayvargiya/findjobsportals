@@ -16,12 +16,12 @@ export default class _Document extends Document {
 					/>
 					<meta
 						name="twitter:description"
-						content="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FJobs%20Log%20Book%2FLog%20Book%20Thumbnail.png?alt=media&token=f4e27a1a-a681-47c8-bcac-a437f981865d"
+						content="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FJobs%20Log%20Book%2Fhome_banner.png?alt=media&token=a50b8514-8018-44f5-af8f-92468e4bd384"
 					/>
 					<meta
 						name="twitter:image"
 						property="twitter:image"
-						content="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FJobs%20Log%20Book%2FLog%20Book%20Thumbnail.png?alt=media&token=f4e27a1a-a681-47c8-bcac-a437f981865d"
+						content="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FJobs%20Log%20Book%2Fhome_banner.png?alt=media&token=a50b8514-8018-44f5-af8f-92468e4bd384"
 					/>
 					<meta
 						name="keywords"
@@ -35,12 +35,12 @@ export default class _Document extends Document {
 					/>
 					<meta
 						name="og:description"
-						content="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FJobs%20Log%20Book%2FLog%20Book%20Thumbnail.png?alt=media&token=f4e27a1a-a681-47c8-bcac-a437f981865d"
+						content="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FJobs%20Log%20Book%2Fhome_banner.png?alt=media&token=a50b8514-8018-44f5-af8f-92468e4bd384"
 					/>
 					<meta
 						name="og:image"
 						property="og:image"
-						content="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FJobs%20Log%20Book%2FLog%20Book%20Thumbnail.png?alt=media&token=f4e27a1a-a681-47c8-bcac-a437f981865d"
+						content="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FJobs%20Log%20Book%2Fhome_banner.png?alt=media&token=a50b8514-8018-44f5-af8f-92468e4bd384"
 					/>
 					<meta
 						name="keywords"
