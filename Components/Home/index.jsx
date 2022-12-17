@@ -65,7 +65,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<div className="md:w-3/5 xl:w-4/6 2xl:w-2/5 mx-auto xxs:w-full xs:w-full sm:w-full my-20">
+			<div className="md:w-4/5 mx-auto xxs:w-full xxs:w-full xs:w-full sm:w-full my-20">
 				<p className="text-4xl font-bold">Jobs Portals around the world</p>
 				<p>
 					Simplify your job search with extensive list of jobs portals around

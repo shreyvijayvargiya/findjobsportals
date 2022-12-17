@@ -25,17 +25,32 @@ const PortalModal = ({ portal, opened, setOpened }) => {
 				title={portal?.name}
 				classNames={{
 					title: "text-3xl",
-					root: "w-100 mx-auto",
+					root: "mx-auto",
+				}}
+				className={{
+					width: "100%",
+					height: "100%",
+					"& .mantine-Paper-root": {
+						background: "#101010",
+						width: "30%",
+						height: "auto",
+						padding: 0,
+						"& .mantine-ActionIcon-root": {
+							outline: "none",
+						},
+					},
 				}}
 			>
 				{portal ? (
 					<>
-						{portal.image && <div className="border border-gray-300 rounded-md">
-							<img
-								className="w-full h-auto mx-auto rounded-md"
-								src={portal.image}
-							/>
-						</div>}
+						{portal.image && (
+							<div className="border border-gray-300 rounded-md">
+								<img
+									className="w-full h-auto mx-auto rounded-md"
+									src={portal.image}
+								/>
+							</div>
+						)}
 						<p className="text-md my-2">{portal.description}</p>
 						<a
 							href={portal.website}
