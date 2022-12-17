@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.18/libexec/bin/yarn.js add dns
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.18/libexec/bin/yarn.js add react-tastify
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/shreyvijayvargiya/.bun/bin:/opt/homebrew/bin
@@ -14,7 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, open '/Users/shreyvijayvargiya/Library/Caches/Yarn/v6/.tmp/c093b6de586a0ae2ebbab27ba3b833a5/.yarn-tarball.tgz'
+  Error: https://registry.yarnpkg.com/react-tastify: Not found
+      at Request.params.callback [as _callback] (/opt/homebrew/Cellar/yarn/1.22.18/libexec/lib/cli.js:66138:18)
+      at Request.self.callback (/opt/homebrew/Cellar/yarn/1.22.18/libexec/lib/cli.js:140883:22)
+      at Request.emit (node:events:526:28)
+      at Request.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.18/libexec/lib/cli.js:141855:10)
+      at Request.emit (node:events:526:28)
+      at IncomingMessage.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.18/libexec/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:645:28)
+      at IncomingMessage.emit (node:events:538:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
 
 npm manifest: 
   {
@@ -36,6 +46,7 @@ npm manifest:
   		"@emotion/server": "^11.10.0",
   		"@mantine/core": "^5.9.3",
   		"@mantine/hooks": "^5.9.3",
+  		"@mantine/modals": "^5.9.5",
   		"@mantine/next": "^5.9.3",
   		"@next/bundle-analyzer": "^13.0.6",
   		"@supabase/supabase-js": "^1.28.0",
@@ -1361,6 +1372,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-5.9.3.tgz#58bfa80ec879b6526345f96586278f0cfe7013db"
     integrity sha512-r0z5qMcpi26TwWBD5ZLoXNPd7PvBDoksSBlH15Ys9AYlClr/wYlvp1CmdR6zMIZ9asT9P+i8WdD/XYgymkoPGg==
   
+  "@mantine/modals@^5.9.5":
+    version "5.9.5"
+    resolved "https://registry.yarnpkg.com/@mantine/modals/-/modals-5.9.5.tgz#69e7d659de7518605d5ea1dae9ed883880e0df62"
+    integrity sha512-ZVtvzHCyjkkztWhz3gkbsX8wdm7j0lN8dAaF51xvQHs9eZPgP5gXzyGpqeU23trk8O+4b6nY/TT2+5amJ/SKrQ==
+    dependencies:
+      "@mantine/utils" "5.9.5"
+  
   "@mantine/next@^5.9.3":
     version "5.9.3"
     resolved "https://registry.yarnpkg.com/@mantine/next/-/next-5.9.3.tgz#cd7971096dafc6f80a2d5b82ff92514fd9b9703a"
@@ -1389,6 +1407,11 @@ Lockfile:
     version "5.9.3"
     resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-5.9.3.tgz#649726ed2ff001a7fcf512f805c5ee895d7a27f2"
     integrity sha512-03Km80wjeQX2LHYpNrJ+kWbTrLmp1fupOGzkUvuPtbhoA4C1Zd9JfGI1UuGHSYQFTwMXmzjkHS3K9PngqjTl+g==
+  
+  "@mantine/utils@5.9.5":
+    version "5.9.5"
+    resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-5.9.5.tgz#9b56c899e479c90abecc096eb8543b93bdc52938"
+    integrity sha512-OtMOvXMyqpZ+Tz25DYRwRkvERvmF4L0RJiq+JnXk+1yKDvG+JZQuMMLnt0nZ81T6q7uzDSA29cJ45syHL2BXmQ==
   
   "@napi-rs/triples@^1.0.3":
     version "1.1.0"

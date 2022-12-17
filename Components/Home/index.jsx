@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Table, Badge, Button, Tooltip } from "@mantine/core";
 import { portalsFromSupabase } from "../../utils/api/supabaseApi";
-import {
-	AiFillTwitterCircle,
-	AiFillGithub,
-	AiFillMediumCircle,
-	AiFillYoutube,
-} from "react-icons/ai";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import colors from "tailwindcss/colors";
-import axios from "axios";
 import PortalModal from "./PortalModal";
+import { findSearchModule } from "../../utils/api/searchApi";
 
 const Home = () => {
 	const [data, setData] = useState(null);
@@ -28,14 +20,6 @@ const Home = () => {
 		setLoader(true);
 		getPortals();
 	}, []);
-
-	const handleFetchMetadata = async (item) => {
-		const data = await axios.post(
-			"http://localhost:3000/api/getWebsiteMetadata",
-			{ item }
-		);
-		console.log(data, "data");
-	};
 
 	const ths = (
 		<tr className="bg-black text-left">
@@ -62,6 +46,13 @@ const Home = () => {
 	};
 
 	
+	const [search, setSearch] = useState();
+
+	const handleSearch = (e) => {
+		const val = e.target.value;
+		const searched = findSearchModule(data, val);
+		console.log(searched.filter(item => item.item))
+	}
 
 	return (
 		<div>
@@ -71,6 +62,7 @@ const Home = () => {
 					Simplify your job search with extensive list of jobs portals around
 					the world
 				</p>
+				<input value={search} onChange={handleSearch} />
 				<div className="my-6">
 					<table className="border-2 border-black rounded-md w-full">
 						<thead>{ths}</thead>
@@ -86,10 +78,15 @@ const Home = () => {
 												<img src={item.icon} className="w-10 h-10 rounded-md" />
 											)}
 										</td>
-										<td className="p-3 border-r-2 border-black cursor-pointer" onClick={() => {
-											setActive(item);
-											setOpened(true);
-										}}>{item.name}</td>
+										<td
+											className="p-3 border-r-2 border-black cursor-pointer"
+											onClick={() => {
+												setActive(item);
+												setOpened(true);
+											}}
+										>
+											{item.name}
+										</td>
 
 										<td className="p-3 border-r-2 border-black">
 											<a

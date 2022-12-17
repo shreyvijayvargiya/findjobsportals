@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@mantine/core";
 import Head from "next/head";
 import router from "next/router";
 import { AiFillBulb } from "react-icons/ai";
 import colors from "tailwindcss/colors";
+import { AddPortals } from "../modules";
 
 const HomePage = () => {
+	const [opened, setOpened] = useState(false);
 	return (
 		<div>
 			<Head>
 				<title>Jobs Portals for your next job</title>
 			</Head>
 			<div>
+				<AddPortals opened={opened} setOpened={setOpened} />
 				<div className="border-b border-black">
 					<br />
 					<div className="text-center mx-auto">
@@ -45,8 +48,7 @@ const HomePage = () => {
 						data-tf-popup="Z7vghLtB"
 						color="dark"
 						variant="filled"
-						data-tf-iframe-props="title=FindJobsPortals-Adding-Portals-Form"
-						data-tf-medium="snippet"
+						onClick={() => setOpened(true)}
 						size="lg"
 						fullWidth
 					>
