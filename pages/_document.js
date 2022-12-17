@@ -47,7 +47,6 @@ export default class _Document extends Document {
 						content="React, Node JS, Frontend, Backend, Blockhain, Software Developer Jobs, Jobs Portals, Find next jobs"
 					/>
 					<meta name="author" content="shrey vijayvargiya" />
-					<title>Jobs Portals for your next job</title>
 				</Head>
 				<body>
 					<Main />

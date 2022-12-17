@@ -13,28 +13,33 @@ import router from "next/router";
 const Body = ({ children }) => {
 	return (
 		<div>
-			<div className="fixed left-0 right-0 top-0 p-4 border-b border-black bg-gray-100">
+			<div className="fixed left-0 right-0 top-0 p-4 border-b-2 border-black bg-gray-50">
 				<div className="flex justify-between items-center">
-					<div className="flex justify-start items-center gap-2 cursor-pointer" onClick={() => router.push("/")}>
+					<div
+						className="flex justify-start items-center gap-2 cursor-pointer"
+						onClick={() => router.push("/")}
+					>
 						<img
 							src="/Log Book Thumbnail.png"
 							className="w-10 h-10 mx-auto rounded-md"
 						/>
 						<p className="text-md font-bold">Find Jobs Portals</p>
 					</div>
-					<button
+					<Button
 						data-tf-popup="Z7vghLtB"
 						data-tf-iframe-props="title=FindJobsPortals-Adding-Portals-Form"
 						data-tf-medium="snippet"
-						className="border bg-black hover:bg-gray-900 rounded-md px-6 py-3 text-gray-100"
+						color="dark"
+						size="md"
+						variant="filled"
 					>
 						Add Portals
-					</button>
+					</Button>
 					<script src="//embed.typeform.com/next/embed.js"></script>
 				</div>
 			</div>
 			<div className="min-w-full my-20">{children}</div>
-			<div className="p-10 border-t border-black">
+			<div className="p-10 border-t-2 border-black border-b-2">
 				<div className="mx-auto w-80 border border-gray-200 hover:bg-gray-100 p-2 rounded-md">
 					<img
 						src="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FFrontend%20Development%20Roadmap%2FFrontend%20Master%20Guide%20-%20Thumbnail.png?alt=media&token=4201633b-7978-4fa7-86d2-06074d10ed73"
@@ -59,6 +64,7 @@ const Body = ({ children }) => {
 					</a>
 				</div>
 				<br />
+				</div>
 				<p className="text-center my-4">
 					Designed & Developed by{" "}
 					<a
@@ -69,7 +75,7 @@ const Body = ({ children }) => {
 						Shrey
 					</a>
 				</p>
-				<div className="flex justify-center items-center m-1 gap-4">
+				<div className="flex justify-center items-center m-1 gap-4 pb-4">
 					<Tooltip label="Twitter">
 						<a
 							href="https://twitter.com/treyvijay"
@@ -81,7 +87,7 @@ const Body = ({ children }) => {
 						>
 							<AiFillTwitterCircle
 								size={24}
-								color={colors.blue[500]}
+								color={colors.black}
 								data-tip="Twitter"
 							/>
 						</a>
@@ -92,7 +98,7 @@ const Body = ({ children }) => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiFillGithub size={24} color={colors.indigo[500]} />
+							<AiFillGithub size={24} color={colors.black} />
 						</a>
 					</Tooltip>
 					<Tooltip label="Medium">
@@ -101,7 +107,7 @@ const Body = ({ children }) => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiFillMediumCircle size={24} color={colors.orange[500]} />
+							<AiFillMediumCircle size={24} color={colors.black} />
 						</a>
 					</Tooltip>
 					<Tooltip label="Devto">
@@ -110,7 +116,7 @@ const Body = ({ children }) => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<FaDev size={24} color={colors.pink[500]} />
+							<FaDev size={24} color={colors.black} />
 						</a>
 					</Tooltip>
 					<Tooltip label="Youtube">
@@ -119,10 +125,9 @@ const Body = ({ children }) => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiFillYoutube size={24} color={colors.red[500]} />
+							<AiFillYoutube size={24} color={colors.black} />
 						</a>
 					</Tooltip>
-				</div>
 			</div>
 		</div>
 	);
