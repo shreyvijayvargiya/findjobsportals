@@ -17,12 +17,15 @@
 		"@emotion/server": "^11.10.0",
 		"@mantine/core": "^5.9.3",
 		"@mantine/hooks": "^5.9.3",
+		"@mantine/modals": "^5.9.5",
 		"@mantine/next": "^5.9.3",
 		"@next/bundle-analyzer": "^13.0.6",
 		"@supabase/supabase-js": "^1.28.0",
 		"@tailwindcss/postcss7-compat": "^2.1.0",
 		"autoprefixer": "^9.8.6",
+		"axios": "^1.2.1",
 		"fuse.js": "^6.6.2",
+		"metadata-scraper": "^0.2.61",
 		"next": "^11.0.0",
 		"postcss": "^7",
 		"postcss-cli": "^8.3.1",
@@ -30,6 +33,7 @@
 		"react-dom": "^16.2.0",
 		"react-icons": "^4.7.1",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat",
+		"url-metadata": "^2.5.0",
 		"yarn": "^1.22.17"
 	}
 }

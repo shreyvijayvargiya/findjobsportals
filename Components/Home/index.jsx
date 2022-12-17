@@ -9,15 +9,18 @@ import {
 } from "react-icons/ai";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import colors from "tailwindcss/colors";
-import { FaDev } from "react-icons/fa";
+import axios from "axios";
+import PortalModal from "./PortalModal";
 
 const Home = () => {
 	const [data, setData] = useState(null);
 	const [loader, setLoader] = useState(false);
+	const [opened, setOpened] = useState(false);
+	const [active, setActive] = useState(null)
 
 	const getPortals = async () => {
-		const users = await portalsFromSupabase();
-		setData(users);
+		const portals = await portalsFromSupabase();
+		setData(portals);
 		setLoader(false);
 	};
 
@@ -26,10 +29,20 @@ const Home = () => {
 		getPortals();
 	}, []);
 
+	const handleFetchMetadata = async (item) => {
+		const data = await axios.post(
+			"http://localhost:3000/api/getWebsiteMetadata",
+			{ item }
+		);
+		console.log(data, "data");
+	};
+
 	const ths = (
 		<tr className="bg-black text-left">
+			<th className="text-white p-4">Logo</th>
 			<th className="text-white p-4">Name</th>
 			<th className="text-white p-4">Website</th>
+			<th className="text-white p-4">Description</th>
 			<th className="text-white p-4">Category</th>
 		</tr>
 	);
@@ -47,6 +60,8 @@ const Home = () => {
 		}
 		return color;
 	};
+
+	
 
 	return (
 		<div>
@@ -66,11 +81,17 @@ const Home = () => {
 										key={item.name}
 										className="hover:bg-gray-200 rounded-md border-2 border-black"
 									>
-										<td className="text-md font-regular p-3 border-r-2 border-black">
-											{item.name}
+										<td className="p-3 border-r-2 border-black">
+											{item.icon && (
+												<img src={item.icon} className="w-10 h-10 rounded-md" />
+											)}
 										</td>
+										<td className="p-3 border-r-2 border-black cursor-pointer" onClick={() => {
+											setActive(item);
+											setOpened(true);
+										}}>{item.name}</td>
 
-										<td className="p-3 hover:text-white border-r-2 border-black">
+										<td className="p-3 border-r-2 border-black">
 											<a
 												href={item.website}
 												target="_blank"
@@ -78,6 +99,17 @@ const Home = () => {
 											>
 												{item.website}
 											</a>
+										</td>
+										<td
+											className="p-3 border-r-2 border-black word-wrap text-ellipsis"
+											style={{
+												whiteSpace: "nowrap",
+												overflow: "hidden",
+												textOverflow: "ellipsis",
+												maxWidth: "300px",
+											}}
+										>
+											{item.description}
 										</td>
 										<td className="p-3 border-r-2 border-black">
 											{item.domain.map((element) => (
@@ -95,6 +127,7 @@ const Home = () => {
 					</table>
 				</div>
 			</div>
+			<PortalModal opened={opened} setOpened={setOpened} portal={active} />
 		</div>
 	);
 };
