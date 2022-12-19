@@ -76,13 +76,16 @@ const Home = () => {
 				<br />
 				<span>Search the website name, category or description</span>
 				<TextInput
-					variant="default"
+					variant="unstyled"
 					placeholder="Search the website"
 					size="md"
-					color="orange"
+					color="grape"
 					value={search}
 					className="lg:w-2/5 sm:w-full xxs:w-full xs:w-full"
 					onChange={handleSearch}
+					classNames={{
+						input: "border border-gray-800 rounded-md focus:border-black p-2 focus:bg-gray-50"
+					}}
 				/>
 				<div className="my-6">
 					<table className="border-2 border-black rounded-md w-full">
