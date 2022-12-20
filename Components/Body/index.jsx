@@ -130,18 +130,17 @@ const Body = ({ children }) => {
 						className="w-full h-full rounded-md"
 					/>
 					<p className="text-xl front-bold">
-						Frontend Magic: All tools at one place
+						Ultimate Blogging Startup Kit
 					</p>
 					<p className="text my-2">
-						List of all frontend tools you need to build your website with ease and fast.
-							An extensive list of all tools such as frameworks, UI libraries, animations, databases, data, video/audio players, canvas, pdf, payments, cookies and many more.
+						Template to write consistently, create and run your own blogging platform, manage your audience and increase your brand value. All in one place using a single dashboard for managing marketing and growing.
 					</p>
 					<a
 						href="https://shreyvijayvargiya.gumroad.com/l/ultimate-blogging-startup-kit?layout=profile"
 						target="_blank"
 						rel="noreferrer"
 					>
-						<Button variant="filled" fullWidth size="sm" color="voilet">
+						<Button variant="filled" fullWidth size="sm" color="grape">
 							Get the template
 						</Button>
 					</a>
