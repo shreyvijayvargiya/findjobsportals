@@ -77,7 +77,7 @@ const Body = ({ children }) => {
 				</Button>
 			</div> */}
 			<div className="p-10 flex justify-center gap-2 items-center border-t-2 border-black border-b-2">
-				<div className="mx-auto w-80 border border-gray-200 hover:bg-gray-100 p-2 rounded-md">
+				<div className="mx-auto w-80 border border-gray-200 hover:bg-gray-100 p-3 rounded-md">
 					<img
 						src="https://firebasestorage.googleapis.com/v0/b/ihatereading-4ba52.appspot.com/o/StoredIn%2FFrontend%20Development%20Roadmap%2FFrontend%20Master%20Guide%20-%20Thumbnail.png?alt=media&token=4201633b-7978-4fa7-86d2-06074d10ed73"
 						alt="Frontend Development Roadmap Banner"
@@ -86,7 +86,7 @@ const Body = ({ children }) => {
 					<p className="text-xl front-bold">
 						Ultimate Frontend Development Roadmap
 					</p>
-					<p className="text font-semibold my-2">
+					<p className="text my-2">
 						Master frontend development by learning top-tech stack with
 						top-notch resources all in one place.
 					</p>
@@ -100,7 +100,7 @@ const Body = ({ children }) => {
 						</Button>
 					</a>
 				</div>
-				<div className="mx-auto w-80 border border-gray-200 hover:bg-gray-100 p-2 rounded-md">
+				<div className="mx-auto w-80 border border-gray-200 hover:bg-gray-100 p-3 rounded-md">
 					<img
 						src="https://bbviewmsqgtepwkbpakl.supabase.co/storage/v1/object/sign/jobsportals/Frontend%20Magic%20Tools/Frontend%20Tools.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJqb2JzcG9ydGFscy9Gcm9udGVuZCBNYWdpYyBUb29scy9Gcm9udGVuZCBUb29scy5wbmciLCJ0cmFuc2Zvcm1hdGlvbnMiOiIiLCJpYXQiOjE2NzE1NDk1ODIsImV4cCI6MTk4NjkwOTU4Mn0.5LcbYU6EdM0WxYlwVMpAstWImoWu3ePMyyYE-sMgLbo"
 						alt="Frontend Tools"
@@ -109,12 +109,35 @@ const Body = ({ children }) => {
 					<p className="text-xl front-bold">
 						Frontend Magic: All tools at one place
 					</p>
-					<p className="text font-semibold my-2">
+					<p className="text my-2">
 						List of all frontend tools you need to build your website with ease and fast.
 							An extensive list of all tools such as frameworks, UI libraries, animations, databases, data, video/audio players, canvas, pdf, payments, cookies and many more.
 					</p>
 					<a
 						href="https://shreyvijayvargiya.gumroad.com/l/frontend-magic-all-tools-at-place?layout=profile"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Button variant="filled" fullWidth size="sm" color="voilet">
+							Get the template
+						</Button>
+					</a>
+				</div>
+<div className="mx-auto w-80 border border-gray-200 hover:bg-gray-100 p-3 rounded-md">
+					<img
+						src="https://bbviewmsqgtepwkbpakl.supabase.co/storage/v1/object/sign/jobsportals/Notion%20templates/PBP%20-%201.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJqb2JzcG9ydGFscy9Ob3Rpb24gdGVtcGxhdGVzL1BCUCAtIDEucG5nIiwidHJhbnNmb3JtYXRpb25zIjoiIiwiaWF0IjoxNjcxNTUxMjIwLCJleHAiOjE5ODY5MTEyMjB9.PNG9z8yPuMzxVM8OG11gnqTGdi_rvIOjAXcRFq07fkM"
+						alt="Frontend Tools"
+						className="w-full h-full rounded-md"
+					/>
+					<p className="text-xl front-bold">
+						Frontend Magic: All tools at one place
+					</p>
+					<p className="text my-2">
+						List of all frontend tools you need to build your website with ease and fast.
+							An extensive list of all tools such as frameworks, UI libraries, animations, databases, data, video/audio players, canvas, pdf, payments, cookies and many more.
+					</p>
+					<a
+						href="https://shreyvijayvargiya.gumroad.com/l/ultimate-blogging-startup-kit?layout=profile"
 						target="_blank"
 						rel="noreferrer"
 					>
